@@ -1,256 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rishabh Maurya | Data Science with Gen AI</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rishabh Maurya | AI/ML Developer</title>
 
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-    body{background:#07111f;color:#e5e7eb;line-height:1.6}
-    a{text-decoration:none;color:inherit}
-    .container{width:90%;max-width:1200px;margin:auto}
-    header{position:sticky;top:0;z-index:1000;background:#07111f;border-bottom:1px solid #1f2937}
-    nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
-    .logo{font-size:24px;font-weight:700;color:#22d3ee}
-    .nav a{margin-left:18px;color:#cbd5e1}
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;padding:80px 0}
-    .badge{display:inline-block;background:#11243d;color:#22d3ee;padding:8px 15px;border-radius:30px;margin-bottom:18px}
-    h1{font-size:48px;line-height:1.2}
-    h1 span,.section-title{color:#22d3ee}
-    .hero p{font-size:18px;color:#cbd5e1;margin:18px 0}
-    .btn{display:inline-block;padding:12px 18px;border-radius:10px;margin:8px 8px 8px 0;font-weight:700}
-    .primary{background:#22d3ee;color:#07111f}
-    .secondary{border:1px solid #22d3ee;color:#22d3ee}
-    .profile{background:#0f172a;border:1px solid #1e293b;border-radius:24px;padding:28px;text-align:center}
-    .profile img{width:170px;height:170px;border-radius:50%;object-fit:cover;border:4px solid #22d3ee}
-    section{padding:55px 0}
-    .section-title{text-align:center;font-size:34px;margin-bottom:30px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-    .card{background:#0f172a;border:1px solid #1e293b;border-radius:18px;padding:24px;transition:.3s}
-    .card:hover{transform:translateY(-6px);border-color:#22d3ee}
-    .card h3{margin-bottom:10px;color:#fff}
-    .card p,.card li{color:#cbd5e1;font-size:15px}
-    .skills{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
-    .skill{background:#11243d;padding:10px 15px;border-radius:30px;color:#cbd5e1}
-    .timeline{display:grid;gap:18px}
-    .timeline-item{background:#0f172a;border-left:4px solid #22d3ee;padding:22px;border-radius:14px}
-    .contact{text-align:center;background:#0f172a;border:1px solid #1e293b;padding:35px;border-radius:20px}
-    footer{text-align:center;padding:24px;background:#020617;color:#94a3b8}
-    .chat{position:fixed;right:18px;bottom:18px;background:#22c55e;color:white;padding:14px 18px;border-radius:40px;font-weight:700}
-    @media(max-width:900px){.hero,.grid{grid-template-columns:1fr}.hero{text-align:center}h1{font-size:36px}.nav{display:none}}
-  </style>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
+body{
+  background:linear-gradient(135deg,#0f172a,#020617);
+  color:#e2e8f0;
+}
+
+/* NAVBAR */
+header{
+  position:sticky;top:0;background:rgba(2,6,23,0.9);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #1e293b;
+  z-index:1000;
+}
+nav{
+  display:flex;justify-content:space-between;
+  padding:18px 8%;
+}
+.logo{font-size:22px;font-weight:700;color:#38bdf8}
+nav a{margin-left:20px;color:#cbd5e1;font-size:14px}
+
+/* HERO */
+.hero{
+  display:flex;flex-wrap:wrap;
+  justify-content:space-between;
+  padding:80px 8%;
+  align-items:center;
+}
+.hero-left{max-width:600px}
+.badge{
+  background:#1e293b;
+  color:#38bdf8;
+  padding:8px 15px;
+  border-radius:30px;
+  display:inline-block;
+}
+h1{font-size:46px;margin:15px 0}
+h1 span{color:#38bdf8}
+.hero p{color:#cbd5e1;margin-bottom:20px}
+.btn{
+  padding:12px 20px;
+  border-radius:10px;
+  margin-right:10px;
+  display:inline-block;
+}
+.primary{background:#38bdf8;color:#020617}
+.secondary{border:1px solid #38bdf8;color:#38bdf8}
+
+/* PROFILE */
+.profile{
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  padding:25px;border-radius:20px;
+  text-align:center;
+}
+.profile img{
+  width:150px;height:150px;
+  border-radius:50%;
+  border:3px solid #38bdf8;
+  object-fit:cover;
+}
+
+/* SECTION */
+section{padding:60px 8%}
+.section-title{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:30px;
+  color:#38bdf8;
+}
+
+/* CARDS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+.card{
+  background:rgba(255,255,255,0.05);
+  padding:20px;border-radius:15px;
+  border:1px solid #1e293b;
+  transition:0.3s;
+}
+.card:hover{
+  transform:translateY(-5px);
+  border-color:#38bdf8;
+}
+
+/* SKILLS */
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center;
+}
+.skill{
+  background:#1e293b;
+  padding:8px 14px;
+  border-radius:30px;
+}
+
+/* CONTACT */
+.contact{text-align:center}
+.contact a{display:inline-block;margin:10px}
+
+/* CHAT */
+.chat{
+  position:fixed;
+  bottom:20px;right:20px;
+  background:#22c55e;
+  color:white;
+  padding:14px 18px;
+  border-radius:50px;
+  font-weight:700;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#020617;
+  color:#94a3b8;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="container">
-    <nav>
-      <div class="logo">Rishabh Maurya</div>
-      <div class="nav">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#certificates">Certificates</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </div>
+<nav>
+<div class="logo">Rishabh Maurya</div>
+<div>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#certificates">Certificates</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
 </header>
 
-<section class="hero container">
-  <div>
-    <span class="badge">Data Science with Gen AI | AI/ML Developer</span>
-    <h1>Hi, I'm <span>Rishabh Maurya</span></h1>
-    <p>
-      Aspiring Data Scientist and Machine Learning Engineer with frontend experience.
-      I build AI/ML projects, dashboards, FastAPI apps, data-driven applications,
-      and Gen AI based solutions.
-    </p>
-    <a href="#projects" class="btn primary">View Projects</a>
-    <a href="Rishabh_AiML.pdf" download class="btn secondary">Download Resume</a>
-    <a href="mailto:mauryarishabh9@gmail.com" class="btn secondary">Hire Me</a>
-  </div>
+<!-- HERO -->
+<section class="hero">
+<div class="hero-left">
+<span class="badge">Data Science with Gen AI</span>
+<h1>Hi, I'm <span>Rishabh Maurya</span></h1>
+<p>AI/ML Developer + UI Frontend Developer building ML models, dashboards, and Gen AI applications.</p>
 
-  <div class="profile">
-    <img src="profile.jpg" alt="Rishabh Maurya Photo">
-    <h2>Rishabh Maurya</h2>
-    <p>AI/ML Developer | UI Frontend Developer</p>
-    <p>Delhi / Uttar Pradesh, India</p>
-  </div>
+<a href="#projects" class="btn primary">View Projects</a>
+<a href="Rishabh_AiML.pdf" download class="btn secondary">Download Resume</a>
+</div>
+
+<div class="profile">
+<img src="profile.jpg">
+<h2>Rishabh Maurya</h2>
+<p>AI/ML Developer</p>
+</div>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
-  <div class="container">
-    <h2 class="section-title">About Me</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Personal Details</h3>
-        <p><b>Name:</b> Rishabh Maurya</p>
-        <p><b>Age:</b> 26</p>
-        <p><b>DOB:</b> 24 January 2000</p>
-        <p><b>Birth Place:</b> Uttar Pradesh</p>
-      </div>
-      <div class="card">
-        <h3>Education</h3>
-        <p><b>B.Tech:</b> Electronics & Communication Engineering</p>
-        <p><b>College:</b> Government Engineering College, Bikaner</p>
-        <p><b>Year:</b> 2017 - 2021</p>
-      </div>
-      <div class="card">
-        <h3>Professional Summary</h3>
-        <p>
-          Strong foundation in Python, Machine Learning, Statistics, Data Analysis,
-          Feature Engineering, NLP, LLMs, FastAPI and frontend dashboard development.
-        </p>
-      </div>
-    </div>
-  </div>
+<h2 class="section-title">About Me</h2>
+<div class="grid">
+<div class="card">
+<h3>Personal</h3>
+<p>DOB: 24 Jan 2000</p>
+<p>Age: 26</p>
+<p>Location: UP / Delhi</p>
+</div>
+
+<div class="card">
+<h3>Education</h3>
+<p>B.Tech ECE</p>
+<p>Govt Eng College Bikaner</p>
+<p>2017–2021</p>
+</div>
+
+<div class="card">
+<h3>Summary</h3>
+<p>Strong foundation in Python, ML, NLP, Gen AI with 20+ projects and frontend experience.</p>
+</div>
+</div>
 </section>
 
-<section id="experience">
-  <div class="container">
-    <h2 class="section-title">Experience & Training</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <h3>Web Developer - Webvio Technologies Pvt. Ltd.</h3>
-        <p>Nov 2024 - Dec 2025</p>
-        <p>Designed dashboards, real-time analytics UI, business insight panels, APIs integration and data-driven web applications.</p>
-      </div>
-      <div class="timeline-item">
-        <h3>UI/UX Developer - Marketwicks Pvt. Ltd.</h3>
-        <p>Jan 2023 - Oct 2024</p>
-        <p>Worked on fintech dashboards, CRM systems, trading platforms, reporting UI, database-based dashboards and real-time data updates.</p>
-      </div>
-      <div class="timeline-item">
-        <h3>Data Science with Gen AI - PW Skills</h3>
-        <p>5 Months Training Program</p>
-        <p>Learned Python, SQL, Pandas, NumPy, Machine Learning, NLP, Generative AI, LLMs, FastAPI and deployment basics.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="skills">
-  <div class="container">
-    <h2 class="section-title">Technical Skills</h2>
-    <div class="skills">
-      <span class="skill">Python</span>
-      <span class="skill">SQL</span>
-      <span class="skill">Pandas</span>
-      <span class="skill">NumPy</span>
-      <span class="skill">Scikit-learn</span>
-      <span class="skill">Machine Learning</span>
-      <span class="skill">NLP</span>
-      <span class="skill">Generative AI</span>
-      <span class="skill">LLMs</span>
-      <span class="skill">FastAPI</span>
-      <span class="skill">Flask</span>
-      <span class="skill">Docker</span>
-      <span class="skill">AWS</span>
-      <span class="skill">HTML</span>
-      <span class="skill">CSS</span>
-      <span class="skill">JavaScript</span>
-      <span class="skill">React</span>
-      <span class="skill">Angular</span>
-      <span class="skill">Figma</span>
-      <span class="skill">GitHub</span>
-    </div>
-  </div>
-</section>
-
+<!-- PROJECTS -->
 <section id="projects">
-  <div class="container">
-    <h2 class="section-title">Projects Overview</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>UCCAS AI Based Project</h3>
-        <p>AI-based business solution focused on intelligent automation, dashboard insights, data handling and user-friendly frontend experience.</p>
-      </div>
-      <div class="card">
-        <h3>Cryptocurrency Price Prediction</h3>
-        <p>Python, Pandas, Scikit-learn, FastAPI and Matplotlib based ML prediction system.</p>
-      </div>
-      <div class="card">
-        <h3>Fraud Transaction Detection</h3>
-        <p>Random Forest classifier with feature engineering and model evaluation on fraud dataset.</p>
-      </div>
-      <div class="card">
-        <h3>Hindi ASR System</h3>
-        <p>Speech recognition project using HuggingFace Transformers, Librosa, PyTorch, WER and CER metrics.</p>
-      </div>
-      <div class="card">
-        <h3>House Price Prediction</h3>
-        <p>ML regression project with FastAPI backend and responsive HTML frontend.</p>
-      </div>
-      <div class="card">
-        <h3>Spam Email Detection</h3>
-        <p>NLP classification project for spam, ham and smishing detection.</p>
-      </div>
-      <div class="card">
-        <h3>Movie Recommendation System</h3>
-        <p>Content-based recommendation system using cosine similarity.</p>
-      </div>
-      <div class="card">
-        <h3>Face Detection Web App</h3>
-        <p>OpenCV and FastAPI based real-time face detection web application.</p>
-      </div>
-      <div class="card">
-        <h3>20+ Projects</h3>
-        <p>Includes ML, Gen AI, UI dashboards, FastAPI apps, data analysis, NLP and frontend projects.</p>
-      </div>
-    </div>
-  </div>
+<h2 class="section-title">Projects</h2>
+<div class="grid">
+<div class="card"><h3>UCCAS AI Project</h3><p>AI based automation + dashboard system</p></div>
+<div class="card"><h3>Crypto Prediction</h3><p>ML + FastAPI</p></div>
+<div class="card"><h3>Spam Detection</h3><p>NLP Model</p></div>
+<div class="card"><h3>Movie Recommender</h3><p>Recommendation system</p></div>
+<div class="card"><h3>Fraud Detection</h3><p>ML classification</p></div>
+<div class="card"><h3>20+ Projects</h3><p>AI, ML, UI dashboards</p></div>
+</div>
 </section>
 
+<!-- CERTIFICATES -->
 <section id="certificates">
-  <div class="container">
-    <h2 class="section-title">Certificates</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>PwC Immersion Program</h3>
-        <p>Add your certificate link here.</p>
-        <a class="btn secondary" href="#" target="_blank">View Certificate</a>
-      </div>
-      <div class="card">
-        <h3>Data Science with Gen AI</h3>
-        <p>Add your PW Skills certificate link here.</p>
-        <a class="btn secondary" href="#" target="_blank">View Certificate</a>
-      </div>
-      <div class="card">
-        <h3>Resume Certificates</h3>
-        <p>Certificate links are mentioned in resume. Recruiters can download resume for verification.</p>
-        <a class="btn primary" href="Rishabh_AiML.pdf" download>Download Resume</a>
-      </div>
-    </div>
-  </div>
+<h2 class="section-title">Certificates</h2>
+<div class="grid">
+
+<div class="card">
+<h3>PwC Immersion Program</h3>
+<a href="https://drive.google.com/file/d/1c6hWdwZ-4y71tQ5X4zWNACv1Zo1_hgWP/view?usp=sharing" target="_blank" class="btn secondary">View</a>
+</div>
+
+<div class="card">
+<h3>Data Science with Gen AI</h3>
+<a href="https://pwskills.com/learn/certificate/39724e07-efe7-4d46-94e4-c3536c8ba72c/?isCareerPath=true" target="_blank" class="btn primary">View</a>
+</div>
+
+<div class="card">
+<h3>Resume Certificates</h3>
+<a href="Rishabh_AiML.pdf" download class="btn secondary">Download Resume</a>
+</div>
+
+</div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
-  <div class="container">
-    <h2 class="section-title">Contact Me</h2>
-    <div class="contact">
-      <h3>Available for Internship / Fresher AI-ML Roles</h3>
-      <p>Email: <a href="mailto:mauryarishabh9@gmail.com">mauryarishabh9@gmail.com</a></p>
-      <p>WhatsApp: <a href="https://wa.me/919628491557" target="_blank">9628491557</a></p>
-      <p>Location: Delhi / Uttar Pradesh, India</p>
+<h2 class="section-title">Contact</h2>
+<div class="contact">
+<p>Email: mauryarishabh9@gmail.com</p>
+<p>WhatsApp: 9628491557</p>
 
-      <br>
-      <a class="btn secondary" href="https://www.linkedin.com/in/rishabh-maurya-097355191/" target="_blank">LinkedIn</a>
-      <a class="btn secondary" href="https://github.com/Rishabh902" target="_blank">GitHub</a>
-      <a class="btn secondary" href="https://www.instagram.com/r_i_s_h_a_b_h.maurya" target="_blank">Instagram</a>
-      <a class="btn primary" href="Rishabh_AiML.pdf" download>Download Resume</a>
-    </div>
-  </div>
+<a href="https://www.linkedin.com/in/rishabh-maurya-097355191/" class="btn secondary" target="_blank">LinkedIn</a>
+<a href="https://github.com/Rishabh902" class="btn secondary" target="_blank">GitHub</a>
+<a href="https://www.instagram.com/r_i_s_h_a_b_h.maurya" class="btn secondary" target="_blank">Instagram</a>
+</div>
 </section>
 
-<a class="chat" href="https://wa.me/919628491557?text=Hello%20Rishabh%2C%20I%20visited%20your%20portfolio." target="_blank">
-  Live Chat
-</a>
+<a class="chat" href="https://wa.me/919628491557" target="_blank">Chat</a>
 
 <footer>
-  <p>© 2026 Rishabh Maurya | Data Science with Gen AI | AI/ML Developer</p>
+© 2026 Rishabh Maurya | AI/ML Developer
 </footer>
 
 </body>
